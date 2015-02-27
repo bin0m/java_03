@@ -196,12 +196,32 @@ Date, Calendar, DateFormat (Format). Joda-Time
         date2.add(Calendar.HOUR, -30);
         System.out.println(dateFormat.format(date2.getTime()));
 ```
-yyyy - год 4 цифры
-MM - месяц 2 цифры
-dd - день в месяце 2 цифры
-HH - час 2 цифры
-mm - минута 2 цифры
-ss - секунда 2 цифры
+
+Все возможности форматирования даты:
+https://docs.oracle.com/javase/7/docs/api/java/text/SimpleDateFormat.html
+
+Форматирование даты:
+* yyyy - год 4 цифры
+* MM - месяц 2 цифры
+* dd - день в месяце 2 цифры
+* HH - час 2 цифры
+* mm - минута 2 цифры
+* ss - секунда 2 цифры
+``` java
+        Date date = new Date();
+        System.out.println("date = " + date);
+        SimpleDateFormat dateFormat =
+           new SimpleDateFormat("'Дата и время:' dd.MM.yyyy HH:mm:ss");
+
+        System.out.println(dateFormat.format(date));
+
+        SimpleDateFormat russianDate =
+                new SimpleDateFormat("dd.MM.yyyy");
+        Date date2 = russianDate.parse("11.10.2014");
+        System.out.println(date2);
+
+        System.out.println(dateFormat.format(date2));
+```
 LocalDate now = new LocalDate();
 Печать даты
 ﻿JavaFX
