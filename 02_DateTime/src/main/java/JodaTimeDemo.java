@@ -14,7 +14,8 @@ public class JodaTimeDemo {
             new SimpleDateFormat("'Date & time:' dd.MM.yyyy HH:mm:ss G", Locale.US);
 
     public static void main(String[] args) {
-        // LocalDate now = new LocalDate();
+        //--> 
+        LocalDate nowDate = new LocalDate();
         LocalDateTime now = new LocalDateTime();
         System.out.println(showDateTime(now));
         System.out.println(now.dayOfMonth().getAsText());
@@ -37,6 +38,7 @@ public class JodaTimeDemo {
 
         LocalDate date = new LocalDate(2013, 5, 3);
         System.out.println(russianDate.format(date.toDate()));
+        //<--
     }
 
     private static String showDateTime(LocalDateTime dateTime) {

@@ -223,8 +223,31 @@ https://docs.oracle.com/javase/7/docs/api/java/text/SimpleDateFormat.html
 
         System.out.println(dateFormat.format(date2));
 ```
-LocalDate now = new LocalDate();
-Печать даты
+``` java
+        LocalDate nowDate = new LocalDate();
+        LocalDateTime now = new LocalDateTime();
+        System.out.println(showDateTime(now));
+        System.out.println(now.dayOfMonth().getAsText());
+        System.out.println("День недели: " + now.dayOfWeek().getAsShortText());
+        System.out.println("Через 10 дней: " + showDateTime(now.plusDays(10)));
+        System.out.println(now.minusMonths(4));
+
+        System.out.println("Через 3 месяца и 10 дней и 2 часа: " +
+                showDateTime(now.plusMonths(3).plusDays(10).plusHours(2)));
+
+        System.out.println("Верхний предел: " + showDateTime(now.plusYears(100000)));
+        System.out.println("Нижний предел: " + showDateTime(now.minusYears(100000)));
+
+        System.out.println("US: " + dateFormat2.format(now.minusYears(100000).toDate()));
+
+        // Печать даты
+        SimpleDateFormat russianDate =
+                new SimpleDateFormat("dd.MM.yyyy");
+        System.out.println(russianDate.format(now.toDate()));
+
+        LocalDate date = new LocalDate(2013, 5, 3);
+        System.out.println(russianDate.format(date.toDate()));
+```
 
 ﻿JavaFX
 ======
