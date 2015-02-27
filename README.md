@@ -149,6 +149,7 @@ contains(Object o) - наличия элемента в списке
 Получаем итератор
 Удаляем элемент
 i.remove(); // java.lang.UnsupportedOperationException
+
 Date, Calendar, DateFormat (Format). Joda-Time
 ----------------------------------------------
 
@@ -224,6 +225,7 @@ https://docs.oracle.com/javase/7/docs/api/java/text/SimpleDateFormat.html
 ```
 LocalDate now = new LocalDate();
 Печать даты
+
 ﻿JavaFX
 ======
 
