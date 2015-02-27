@@ -1,5 +1,6 @@
 import static java.lang.Math.max;
 
+//-->
 /**
  * Бинарное дерево поиска
  * Левый наследник всегда меньше правого.
@@ -100,3 +101,4 @@ public class BinaryTree<T extends Comparable> implements SearchTree<T> {
         }
     }
 }
+//<--
