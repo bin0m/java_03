@@ -140,6 +140,7 @@ TODO: join + split
 ```
 Оптимизация: final List<T> l = new ArrayList<T>(array.length);
 Интерфейс =  Класс с реализацией этого интерфейса
+Очередь: Queue<Integer>
 Метод add() добавить в конец списка
 size() - количество элементов в списке
 get(index) - получить элемент с заданным индексом
@@ -171,49 +172,6 @@ Date, Calendar, DateFormat (Format). Joda-Time
 ----------------------------------------------
 
 
-``` java
-        Calendar now = Calendar.getInstance();
-        System.out.println("День месяца: " +
-                now.get(Calendar.DAY_OF_MONTH));
-        System.out.println("Месяц: " +
-                (now.get(Calendar.MONTH) + 1));
-        System.out.println("Год: " +
-                now.get(Calendar.YEAR));
-
-        System.out.println("Час: " +
-                now.get(Calendar.HOUR));
-        System.out.println("Минута: " +
-                now.get(Calendar.MINUTE));
-        System.out.println("Секунда: " +
-                now.get(Calendar.SECOND));
-
-        SimpleDateFormat dateFormat =
-                new SimpleDateFormat("'Дата и время:' dd.MM.yyyy HH:mm:ss");
-        System.out.println(dateFormat.format(now.getTime()));
-
-        SimpleDateFormat rusMonth =
-                new SimpleDateFormat("MMMMM", LOCALE_RU);
-
-        System.out.println(rusMonth.format(now.getTime()));
-
-        Calendar calendar = Calendar.getInstance();
-        calendar.setTime(rusMonth.parse("Сентябрь"));
-        System.out.println(
-                (calendar.get(Calendar.MONTH) + 1)
-        );
-
-        // Дата через 2 месяца
-        Calendar afterTwoMonths = (Calendar) now.clone();
-        afterTwoMonths.add(Calendar.MONTH, 2);
-
-        SimpleDateFormat russianDate =
-                new SimpleDateFormat("dd.MM.yyyy");
-        System.out.println(russianDate.format(afterTwoMonths.getTime()));
-
-        Calendar date2 = (Calendar) now.clone();
-        date2.add(Calendar.HOUR, -30);
-        System.out.println(dateFormat.format(date2.getTime()));
-```
 
 Все возможности форматирования даты:
 https://docs.oracle.com/javase/7/docs/api/java/text/SimpleDateFormat.html
@@ -239,6 +197,68 @@ https://docs.oracle.com/javase/7/docs/api/java/text/SimpleDateFormat.html
         System.out.println(date2);
 
         System.out.println(dateFormat.format(date2));
+
+        // Изменяю время, ставлю 10 часов
+        date.setHours(10);
+```
+``` java
+        Calendar now = Calendar.getInstance();
+        System.out.println("День месяца: " +
+                now.get(Calendar.DAY_OF_MONTH));
+        // Месяц нумеруется с нуля
+        // 0 - январь
+        // 11 - декабрь
+        System.out.println("Месяц: " +
+                (now.get(Calendar.MONTH) + 1));
+        System.out.println("Год: " +
+                now.get(Calendar.YEAR));
+
+        System.out.println("Час: " +
+                now.get(Calendar.HOUR));
+        System.out.println("Минута: " +
+                now.get(Calendar.MINUTE));
+        System.out.println("Секунда: " +
+                now.get(Calendar.SECOND));
+
+        SimpleDateFormat dateFormat =
+                new SimpleDateFormat("'Дата и время:' dd.MM.yyyy HH:mm:ss");
+        System.out.println(dateFormat.format(now.getTime()));
+
+        SimpleDateFormat dateFormat2 =
+                new SimpleDateFormat("dd.MM.yyyy HH:mm:ss");
+
+        Calendar cal = Calendar.getInstance();
+        Date parsedDate = dateFormat2.parse("03.03.2015 22:34:11");
+        cal.setTime(parsedDate);
+        assertEquals(2015, cal.get(Calendar.YEAR));
+        // Час HOUR_OF_DAY: 00..23
+        // HOUR - 00..11
+        assertEquals(22, cal.get(Calendar.HOUR_OF_DAY));
+        assertEquals(34, cal.get(Calendar.MINUTE));
+        assertEquals(11, cal.get(Calendar.SECOND));
+
+        SimpleDateFormat rusMonth =
+                new SimpleDateFormat("MMMMM", LOCALE_RU);
+
+        System.out.println(rusMonth.format(now.getTime()));
+
+        Calendar calendar = Calendar.getInstance();
+        calendar.setTime(rusMonth.parse("Сентябрь"));
+        System.out.println(
+                (calendar.get(Calendar.MONTH) + 1)
+        );
+
+        // Дата через 2 месяца
+        Calendar afterTwoMonths = (Calendar) now.clone();
+        afterTwoMonths.add(Calendar.MONTH, 2);
+
+        SimpleDateFormat russianDate =
+                new SimpleDateFormat("dd.MM.yyyy");
+        System.out.println(russianDate.format(afterTwoMonths.getTime()));
+
+        Calendar date2 = (Calendar) now.clone();
+        date2.add(Calendar.HOUR, -30);
+        System.out.println(dateFormat.format(date2.getTime()));
 ```
 ``` java
         LocalDate nowDate = new LocalDate();
@@ -247,7 +267,7 @@ https://docs.oracle.com/javase/7/docs/api/java/text/SimpleDateFormat.html
         System.out.println(now.dayOfMonth().getAsText());
         System.out.println("День недели: " + now.dayOfWeek().getAsShortText());
         System.out.println("Через 10 дней: " + showDateTime(now.plusDays(10)));
-        System.out.println(now.minusMonths(4));
+        System.out.println(now.minusMonths(4).plusDays(3));
 
         System.out.println("Через 3 месяца и 10 дней и 2 часа: " +
                 showDateTime(now.plusMonths(3).plusDays(10).plusHours(2)));

@@ -6,7 +6,7 @@ import java.util.Locale;
 /**
  *
  */
-public class JodaTimeDemo {
+public class C_JodaTimeDemo {
 
     static SimpleDateFormat dateFormat =
             new SimpleDateFormat("'Дата и время:' dd.MM.yyyy HH:mm:ss G");
@@ -21,7 +21,7 @@ public class JodaTimeDemo {
         System.out.println(now.dayOfMonth().getAsText());
         System.out.println("День недели: " + now.dayOfWeek().getAsShortText());
         System.out.println("Через 10 дней: " + showDateTime(now.plusDays(10)));
-        System.out.println(now.minusMonths(4));
+        System.out.println(now.minusMonths(4).plusDays(3));
 
         System.out.println("Через 3 месяца и 10 дней и 2 часа: " +
                 showDateTime(now.plusMonths(3).plusDays(10).plusHours(2)));

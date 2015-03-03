@@ -21,6 +21,7 @@ public class SetTest {
     @Test
     public void sets() {
         Set<Integer> intSet = new TreeSet<Integer>();
+        intSet = new HashSet<Integer>();
         assertTrue("Множество пусто", intSet.isEmpty());
 
         // Метод add() добавить в множество

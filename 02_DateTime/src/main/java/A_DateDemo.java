@@ -5,7 +5,7 @@ import java.util.Date;
 //
 // Все возможности форматирования даты:
 // https://docs.oracle.com/javase/7/docs/api/java/text/SimpleDateFormat.html
-public class DateDemo {
+public class A_DateDemo {
 
     public static void main(String[] args) throws ParseException {
         //
@@ -30,6 +30,9 @@ public class DateDemo {
         System.out.println(date2);
 
         System.out.println(dateFormat.format(date2));
+
+        // Изменяю время, ставлю 10 часов
+        date.setHours(10);
         //<--
     }
 }

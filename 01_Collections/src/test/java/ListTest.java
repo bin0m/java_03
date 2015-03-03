@@ -41,6 +41,8 @@ public class ListTest {
         List<Integer> integers = new ArrayList<Integer>();
         assertTrue("Список пуст", integers.isEmpty());
 
+        // Очередь: Queue<Integer>
+
         // Метод add() добавить в конец списка
         integers.add(7);
         integers.add(10);

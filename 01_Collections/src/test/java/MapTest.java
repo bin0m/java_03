@@ -3,11 +3,25 @@ import org.junit.Test;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.TreeMap;
 
 /**
  * Map
  */
 public class MapTest extends Assert {
+
+    static Map<Class, Class> types = new TreeMap<Class, Class>();
+
+    static {
+        types.put(Byte.TYPE, Byte.class);
+        types.put(Short.TYPE, Short.class);
+        types.put(Integer.TYPE, Integer.class);
+        types.put(Long.TYPE, Long.class);
+        types.put(Float.TYPE, Float.class);
+        types.put(Double.TYPE, Double.class);
+        types.put(Character.TYPE, Character.class);
+        types.put(Boolean.TYPE, Boolean.class);
+    }
 
     @Test
     public void testMapOperations() {

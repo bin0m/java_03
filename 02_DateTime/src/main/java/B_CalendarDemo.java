@@ -1,12 +1,15 @@
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
+import java.util.Date;
 import java.util.Locale;
+
+import static org.junit.Assert.assertEquals;
 
 /**
  * Календарь
  */
-public class CalendarDemo {
+public class B_CalendarDemo {
     public static final Locale LOCALE_RU = new Locale("RU");
 
     String months[] = {"Январь", "Февраль",
@@ -18,6 +21,9 @@ public class CalendarDemo {
         Calendar now = Calendar.getInstance();
         System.out.println("День месяца: " +
                 now.get(Calendar.DAY_OF_MONTH));
+        // Месяц нумеруется с нуля
+        // 0 - январь
+        // 11 - декабрь
         System.out.println("Месяц: " +
                 (now.get(Calendar.MONTH) + 1));
         System.out.println("Год: " +
@@ -33,6 +39,19 @@ public class CalendarDemo {
         SimpleDateFormat dateFormat =
                 new SimpleDateFormat("'Дата и время:' dd.MM.yyyy HH:mm:ss");
         System.out.println(dateFormat.format(now.getTime()));
+
+        SimpleDateFormat dateFormat2 =
+                new SimpleDateFormat("dd.MM.yyyy HH:mm:ss");
+
+        Calendar cal = Calendar.getInstance();
+        Date parsedDate = dateFormat2.parse("03.03.2015 22:34:11");
+        cal.setTime(parsedDate);
+        assertEquals(2015, cal.get(Calendar.YEAR));
+        // Час HOUR_OF_DAY: 00..23
+        // HOUR - 00..11
+        assertEquals(22, cal.get(Calendar.HOUR_OF_DAY));
+        assertEquals(34, cal.get(Calendar.MINUTE));
+        assertEquals(11, cal.get(Calendar.SECOND));
 
         SimpleDateFormat rusMonth =
                 new SimpleDateFormat("MMMMM", LOCALE_RU);
