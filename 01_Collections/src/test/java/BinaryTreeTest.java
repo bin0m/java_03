@@ -74,6 +74,7 @@ public class BinaryTreeTest {
 
     @Test
     public void testBinaryTreeNode() {
+        //-->
         // Интерфейс =  Класс с реализацией этого интерфейса
         BinaryTreeNode<Integer> tree = new BinaryTreeNode<Integer>();
         assertFalse(tree.find(3));
@@ -92,5 +93,6 @@ public class BinaryTreeTest {
         assertTrue(tree.find(3));
         assertTrue(tree.find(334));
         assertFalse(tree.find(7789));
+        //<--
     }
 }

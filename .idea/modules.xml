@@ -3,9 +3,10 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/01_Collections/01_Collections.iml" filepath="$PROJECT_DIR$/01_Collections/01_Collections.iml" />
+      <module fileurl="file://$PROJECT_DIR$/02_DateTime/02_DateTime.iml" filepath="$PROJECT_DIR$/02_DateTime/02_DateTime.iml" />
       <module fileurl="file://$PROJECT_DIR$/02_JavaFX/02_JavaFX.iml" filepath="$PROJECT_DIR$/02_JavaFX/02_JavaFX.iml" />
-      <module fileurl="file://$PROJECT_DIR$/lesson_03.iml" filepath="$PROJECT_DIR$/lesson_03.iml" />
+      <module fileurl="file://$PROJECT_DIR$/03_JavaFX/03_JavaFX.iml" filepath="$PROJECT_DIR$/03_JavaFX/03_JavaFX.iml" />
+      <module fileurl="file://$PROJECT_DIR$/java_03.iml" filepath="$PROJECT_DIR$/java_03.iml" />
     </modules>
   </component>
 </project>
-

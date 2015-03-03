@@ -23,10 +23,12 @@
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
         <module name="01_Collections" />
+        <module name="01_DateDemo" />
+        <module name="02_DateTime" />
         <module name="02_JavaFX" />
+        <module name="03_JavaFX" />
         <module name="03_Reflection" />
       </profile>
     </annotationProcessing>
   </component>
 </project>
-

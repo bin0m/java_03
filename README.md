@@ -118,9 +118,26 @@ TODO: join + split
 Добавляем узел с большим значением
 Генератор случайных чисел
 Проверочный set
-Интерфейс =  Класс с реализацией этого интерфейса
-Добавить новое значение
-Добавляем узел с большим значением
+``` java
+        // Интерфейс =  Класс с реализацией этого интерфейса
+        BinaryTreeNode<Integer> tree = new BinaryTreeNode<Integer>();
+        assertFalse(tree.find(3));
+        tree.add(3);
+        assertTrue(tree.find(3));
+        assertFalse(tree.find(2));
+
+        // Добавить новое значение
+        tree.add(2);
+        assertTrue(tree.find(2));
+        assertTrue(tree.find(3));
+
+        // Добавляем узел с большим значением
+        tree.add(334);
+        assertTrue(tree.find(2));
+        assertTrue(tree.find(3));
+        assertTrue(tree.find(334));
+        assertFalse(tree.find(7789));
+```
 Оптимизация: final List<T> l = new ArrayList<T>(array.length);
 Интерфейс =  Класс с реализацией этого интерфейса
 Метод add() добавить в конец списка

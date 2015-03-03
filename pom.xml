@@ -5,14 +5,15 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>java</groupId>
-    <artifactId>lesson_03</artifactId>
+    <artifactId>java_03</artifactId>
     <packaging>pom</packaging>
     <version>1.0</version>
     <name>Java Junior Developer 3</name>
 
     <modules>
         <module>01_Collections</module>
-        <module>02_JavaFX</module>
+        <module>02_DateTime</module>
+        <module>03_JavaFX</module>
     </modules>
 
     <build>
