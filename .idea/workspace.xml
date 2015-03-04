@@ -1,17 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="45b41347-301b-4b87-ab26-17d0224bdb2c" name="Default" comment="Рекурсивная реализация дерева поиска">
-      <change type="MOVED" beforePath="C:\Users\gtee\Desktop\java_03\02_DateTime\src\main\java\CalendarDemo.java" afterPath="$PROJECT_DIR$/02_DateTime/src/main/java/B_CalendarDemo.java" />
-      <change type="MOVED" beforePath="C:\Users\gtee\Desktop\java_03\02_DateTime\src\main\java\DateDemo.java" afterPath="$PROJECT_DIR$/02_DateTime/src/main/java/A_DateDemo.java" />
-      <change type="MOVED" beforePath="C:\Users\gtee\Desktop\java_03\02_DateTime\src\main\java\JodaTimeDemo.java" afterPath="$PROJECT_DIR$/02_DateTime/src/main/java/C_JodaTimeDemo.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/02_DateTime/02_DateTime.iml" afterPath="$PROJECT_DIR$/02_DateTime/02_DateTime.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/01_Collections/src/test/java/ListTest.java" afterPath="$PROJECT_DIR$/01_Collections/src/test/java/ListTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/01_Collections/src/test/java/MapTest.java" afterPath="$PROJECT_DIR$/01_Collections/src/test/java/MapTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/01_Collections/src/test/java/SetTest.java" afterPath="$PROJECT_DIR$/01_Collections/src/test/java/SetTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/02_DateTime/pom.xml" afterPath="$PROJECT_DIR$/02_DateTime/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-    </list>
+    <list default="true" id="45b41347-301b-4b87-ab26-17d0224bdb2c" name="Default" comment="Рекурсивная реализация дерева поиска" />
     <ignored path="lesson_03.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/01_Collections/target/" />
@@ -159,6 +149,38 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="java_03" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lesson_03" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java_03" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="01_Collections" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lesson_03" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java_03" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="01_Collections" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -583,7 +605,7 @@
       <workItem from="1416835439824" duration="2159000" />
       <workItem from="1416931797182" duration="1547000" />
       <workItem from="1425400319398" duration="461000" />
-      <workItem from="1425410195001" duration="1755000" />
+      <workItem from="1425410195001" duration="1859000" />
     </task>
     <task id="LOCAL-00001" summary="Дерево поиска">
       <created>1416837502271</created>
@@ -601,11 +623,11 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16555000" />
+    <option name="totallyTimeSpent" value="16659000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1040" height="744" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -622,7 +644,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2607422" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2607422" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
