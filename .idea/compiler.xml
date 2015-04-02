@@ -30,5 +30,11 @@
         <module name="03_Reflection" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="01_Collections" target="1.5" />
+      <module name="02_DateTime" target="1.5" />
+      <module name="03_JavaFX" target="1.5" />
+      <module name="java_03" target="1.5" />
+    </bytecodeTargetLevel>
   </component>
 </project>
