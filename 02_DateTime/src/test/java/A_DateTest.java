@@ -1,3 +1,6 @@
+import org.junit.Assert;
+import org.junit.Test;
+
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -5,10 +8,10 @@ import java.util.Date;
 //
 // Все возможности форматирования даты:
 // https://docs.oracle.com/javase/7/docs/api/java/text/SimpleDateFormat.html
-public class A_DateDemo {
+public class A_DateTest extends Assert {
 
-    public static void main(String[] args) throws ParseException {
-        //
+    @Test
+    public void testDate() throws ParseException {
         // Форматирование даты:
         // * yyyy - год 4 цифры
         // * MM - месяц 2 цифры
@@ -26,20 +29,19 @@ public class A_DateDemo {
 
         SimpleDateFormat russianDate =
                 new SimpleDateFormat("dd.MM.yyyy");
+        Date date1 = russianDate.parse("12.09.2015");
         Date date2 = russianDate.parse("11.10.2014");
-        System.out.println(date2);
+        assertTrue(date2.after(date1));
+        assertTrue(date2.before(date1));
+        assertTrue(date1.after(date1));
+        assertTrue(date1.before(date1));
 
-        SimpleDateFormat chineseDate =
-                new SimpleDateFormat("yyyy-MM-dd");
-        Date date3 = chineseDate.parse("2015-09-15");
-        System.out.println(
-                russianDate.format(date3));
+        System.out.println(date2);
 
         System.out.println(dateFormat.format(date2));
 
         // Изменяю время, ставлю 10 часов
-        date.setHours(10); // Deprecated
-        //date.setDate();
+        date.setHours(10); // Depreacted
         //<--
     }
 }

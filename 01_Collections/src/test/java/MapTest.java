@@ -29,11 +29,13 @@ public class MapTest extends Assert {
 
         assertTrue("Список пуст", map.isEmpty());
 
+        // put( КЛЮЧ, ЗНАЧЕНИЕ )
         map.put("Hi", "Привет");
         assertEquals(1, map.size());
 
         map.put("Size", "Размер");
 
+        // значение = get( КЛЮЧ )
         assertEquals("Привет", map.get("Hi"));
     }
 }

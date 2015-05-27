@@ -38,7 +38,8 @@ public class B_CalendarDemo {
 
         SimpleDateFormat dateFormat =
                 new SimpleDateFormat("'Дата и время:' dd.MM.yyyy HH:mm:ss");
-        System.out.println(dateFormat.format(now.getTime()));
+        Date date = now.getTime();
+        System.out.println(dateFormat.format(date));
 
         SimpleDateFormat dateFormat2 =
                 new SimpleDateFormat("dd.MM.yyyy HH:mm:ss");
@@ -56,7 +57,7 @@ public class B_CalendarDemo {
         SimpleDateFormat rusMonth =
                 new SimpleDateFormat("MMMMM", LOCALE_RU);
 
-        System.out.println(rusMonth.format(now.getTime()));
+        System.out.println(rusMonth.format(date));
 
         Calendar calendar = Calendar.getInstance();
         calendar.setTime(rusMonth.parse("Сентябрь"));

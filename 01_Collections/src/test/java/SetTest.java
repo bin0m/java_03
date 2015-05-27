@@ -15,13 +15,22 @@ public class SetTest {
         return l;
     }
 
+    public static void main(String[] args) {
+        Set<String> strings = new HashSet<String>();
+        strings.add("Hi");
+        strings.add("Test");
+        strings.add("Hi");
+        for (String s : strings)
+            System.out.println(s);
+    }
+
     /**
      * Основные операции на множествах
      */
     @Test
     public void sets() {
-        Set<Integer> intSet = new TreeSet<Integer>();
-        intSet = new HashSet<Integer>();
+        Set<Integer> intSet = new HashSet<Integer>();
+        //intSet = new HashSet<Integer>();
         assertTrue("Множество пусто", intSet.isEmpty());
 
         // Метод add() добавить в множество
@@ -59,7 +68,6 @@ public class SetTest {
         assertTrue("Содержатся все эти элементы", intSet.containsAll(arrayToList(new Integer[]{7, 10, 2})));
     }
 
-
     @Test
     public void iterators() {
         Set<Integer> list = new TreeSet<Integer>(Arrays.asList(2, 3, 5, 8, 13));
@@ -90,14 +98,5 @@ public class SetTest {
 
     private Integer[] setToArray(Set<Integer> list) {
         return list.toArray(new Integer[list.size()]);
-    }
-
-    public static void main(String[] args) {
-        Set<String> strings = new HashSet<String>();
-        strings.add("Hi");
-        strings.add("Test");
-        strings.add("Hi");
-        for (String s : strings)
-            System.out.println(s);
     }
 }

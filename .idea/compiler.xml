@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="CompilerConfiguration">
-    <option name="DEFAULT_COMPILER" value="Javac" />
     <resourceExtensions />
     <wildcardResourcePatterns>
       <entry name="!?*.java" />
@@ -12,6 +11,7 @@
       <entry name="!?*.flex" />
       <entry name="!?*.kt" />
       <entry name="!?*.clj" />
+      <entry name="!?*.aj" />
     </wildcardResourcePatterns>
     <annotationProcessing>
       <profile default="true" name="Default" enabled="false">
@@ -23,14 +23,12 @@
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
         <module name="01_Collections" />
-        <module name="01_DateDemo" />
+        <module name="02_DateDemo" />
         <module name="02_DateTime" />
-        <module name="02_JavaFX" />
         <module name="03_JavaFX" />
-        <module name="03_Reflection" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
+    <bytecodeTargetLevel target="1.8">
       <module name="01_Collections" target="1.5" />
       <module name="02_DateTime" target="1.5" />
       <module name="03_JavaFX" target="1.5" />
